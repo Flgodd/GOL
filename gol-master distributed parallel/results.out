@@ -1,0 +1,32 @@
+goos: darwin
+goarch: arm64
+pkg: uk.ac.bris.cs/gameoflife
+BenchmarkGol/512x512x1000-1-8         	       1	3626720917 ns/op
+BenchmarkGol/512x512x1000-2-8         	       1	3811471667 ns/op
+BenchmarkGol/512x512x1000-3-8         	       1	4230519000 ns/op
+BenchmarkGol/512x512x1000-4-8         	       1	4736910375 ns/op
+BenchmarkGol/512x512x1000-5-8         	       1	5289072625 ns/op
+BenchmarkGol/512x512x1000-6-8         	       1	5953973667 ns/op
+BenchmarkGol/512x512x1000-7-8         	       1	6544016583 ns/op
+BenchmarkGol/512x512x1000-8-8         	       1	7198131917 ns/op
+BenchmarkGol/512x512x1000-9-8         	       1	7601662166 ns/op
+BenchmarkGol/512x512x1000-10-8        	       1	8171231750 ns/op
+BenchmarkGol/512x512x1000-11-8        	       1	8703662583 ns/op
+BenchmarkGol/512x512x1000-12-8        	       1	9264918792 ns/op
+BenchmarkGol/512x512x1000-13-8        	       1	9786207542 ns/op
+BenchmarkGol/512x512x1000-14-8        	       1	10278908584 ns/op
+BenchmarkGol/512x512x1000-15-8        	       1	10722620542 ns/op
+BenchmarkGol/512x512x1000-16-8        	       1	11393185166 ns/op
+panic: Window data not set
+
+goroutine 1 [running, locked to thread]:
+uk.ac.bris.cs/gameoflife/util.Check(...)
+	/Users/flgodd/Documents/gol-skeleton-master copy PSM PA/util/check.go:5
+uk.ac.bris.cs/gameoflife/sdl.(*Window).Destroy(0x1400014c3c0)
+	/Users/flgodd/Documents/gol-skeleton-master copy PSM PA/sdl/window.go:52 +0x128
+uk.ac.bris.cs/gameoflife.TestMain(0x1400022e000)
+	/Users/flgodd/Documents/gol-skeleton-master copy PSM PA/sdl_test.go:77 +0x458
+main.main()
+	_testmain.go:59 +0x1d4
+exit status 2
+FAIL	uk.ac.bris.cs/gameoflife	117.506s
