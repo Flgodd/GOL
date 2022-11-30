@@ -27,6 +27,7 @@ func makeCall(client *rpc.Client, bh int, h int, turn int, out chan<- [][]byte) 
 	if err != nil {
 		fmt.Println("error")
 		errorC = true
+		return
 	}
 	out <- response.SliceWorld
 }
