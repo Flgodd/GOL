@@ -235,7 +235,7 @@ func distributor(p Params, c distributorChannels) {
 	c.ioCommand <- ioCheckIdle
 	Idle = <-c.ioIdle
 
-	if Idle == false {
+	if Idle == true {
 		c.events <- StateChange{p.Turns, Quitting}
 	}
 
