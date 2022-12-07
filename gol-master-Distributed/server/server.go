@@ -110,7 +110,7 @@ func (s *GameOperations) Quitting(req stubs.KQuit, res *stubs.StringM) (err erro
 
 func main() {
 	pAddr := flag.String("port", "8050", "port to listen on")
-	brokerAddr := flag.String("broker", "127.0.0.1:8030", "Address of broker instance")
+	brokerAddr := flag.String("broker", "54.88.252.205:8030", "Address of broker instance")
 	flag.Parse()
 	client, _ := rpc.Dial("tcp", *brokerAddr)
 	rand.Seed(time.Now().UnixNano())
